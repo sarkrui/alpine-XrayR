@@ -1,34 +1,14 @@
 #!/sbin/openrc-run
 
-name="Xray"
-description="The best v2ray-core, with XTLS support"
-description_checkconfig="Test configuration file"
-
-: ${env:="XRAY_LOCATION_ASSET=/usr/local/lib/xray/"}
-: ${confdir:="/usr/local/etc/xray/"}
-
-command="/usr/local/bin/xray"
-command_args="run -confdir $confdir"
-command_user="nobody"
-
-pidfile="/run/xray.pid"
-command_background="yes"
-
-extra_commands="checkconfig"
+name=$RC_SVCNAME
+description="XrayR Service"
+supervisor="supervise-daemon"
+command="/usr/local/XrayR/XrayR"
+command_args="-config /etc/XrayR/config.yml"
+supervise_daemon_args=" -d /usr/local/XrayR/"
+command_user="root:root"
 
 depend() {
-	need net
-}
-
-checkconfig() {
-	if [ ! -d "$confdir" ]; then
-		eerror "You need to setup $confdir first"
-		return 1
-	fi
-	export $env
-	$command $command_args -test
-}
-
-start_pre() {
-	checkconfig
+	after net dns 
+	use net 
 }
