@@ -1,6 +1,6 @@
-# alpinelinux-install-xray
+# alpinelinux-install XrayR
 
-English | [中文(中国)](README_zh-cn.md) | [中文(薹灣)](README_zh-tw.md)
+English | [中文(简体)](README_zh-cn.md) | [中文(繁体)](README_zh-tw.md)
 
 ## Install dependencies
 
@@ -27,29 +27,29 @@ $ curl -O https://raw.githubusercontent.com/XTLS/alpinelinux-install-xray/main/i
 ### Enable
 
 ```
-# rc-update add xray
+# rc-update add XrayR
 ```
 
 ### Disable
 
 ```
-# rc-update del xray
+# rc-update del XrayR
 ```
 
 ### Start
 
 ```
-# rc-service xray start
+# rc-service XrayR start
 ```
 
 ### Stop
 
 ```
-# rc-service xray stop
+# rc-service XrayR stop
 ```
 
 ### Restart
 
 ```
-# rc-service xray restart
+# rc-service XrayR restart
 ```
