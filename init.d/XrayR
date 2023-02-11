@@ -9,6 +9,6 @@ supervise_daemon_args=" -d /usr/local/XrayR/"
 command_user="root:root"
 
 depend() {
-	after net dns 
-	use net 
+	after net dns
+	use net
 }
