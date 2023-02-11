@@ -1,6 +1,6 @@
 # alpinelinux-install-xray
 
-[English](README.md) | 中文(中国) | [中文(薹灣)](README_zh-tw.md)
+English(README.md) | 中文(简体) | [中文(繁体)](README_zh-tw.md)
 
 
 ## 依赖软件
@@ -14,7 +14,7 @@
 ## 下载
 
 ```
-$ curl -O https://raw.githubusercontent.com/XTLS/alpinelinux-install-xray/main/install-release.sh
+$ curl -O https://raw.githubusercontent.com/sarkrui/alpine-XrayR/main/install-xrayr.sh
 ```
 
 ## 使用
