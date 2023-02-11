@@ -1,6 +1,6 @@
 #!/sbin/openrc-run
 
-name=$RC_SVCNAME
+name="XrayR"
 description="XrayR Service"
 supervisor="supervise-daemon"
 command="/usr/local/XrayR/XrayR"
