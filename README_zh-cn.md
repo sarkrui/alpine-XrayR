@@ -20,7 +20,7 @@ $ curl -O https://raw.githubusercontent.com/sarkrui/alpine-XrayR/main/install-xr
 ## 使用
 
 ```
-# ash install-release.sh
+# ash install-xrayr.sh
 ```
 
 ## 管理命令
