@@ -123,6 +123,7 @@ install_startup_service_file() {
         curl -o "/etc/init.d/XrayR" https://raw.githubusercontent.com/sarkrui/alpine-XrayR/main/init.d/XrayR -s
         rc-update add XrayR
         rc-service XrayR start
+        rc-update add XrayR default
         if [ "$?" -ne '0' ]; then
             echo 'error: Failed to start service file download! Please check your network or try again.'
             exit 1
