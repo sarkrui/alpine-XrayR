@@ -172,7 +172,6 @@ main() {
     is_it_running
     install_xrayr
     install_confdir
-    install_log
     install_startup_service_file
     information
 }
