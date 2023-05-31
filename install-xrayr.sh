@@ -153,7 +153,7 @@ information() {
     if [ "$OPENRC" -eq '1' ]; then
         echo 'installed: /etc/init.d/XrayR'
     fi
-    rm -r "$TMP_DIRECTORY"
+    trap 'rm -rf "$TMP_DIRECTORY"' EXIT
     echo "removed: $TMP_DIRECTORY"
     echo "You may need to execute a command to remove dependent software: apk del curl unzip"
     if [ "$XRAY_RUNNING" -eq '1' ]; then
