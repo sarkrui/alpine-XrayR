@@ -119,14 +119,13 @@ install_startup_service_file() {
     OPENRC='0'
     if [ ! -f '/etc/init.d/XrayR' ]; then
         mkdir "${TMP_DIRECTORY}init.d/"
-        curl -o "${TMP_DIRECTORY}init.d/XrayR" https://raw.githubusercontent.com/sarkrui/alpine-XrayR/main/init.d/XrayR -s
+        curl -o "/etc/init.d/XrayR" https://raw.githubusercontent.com/sarkrui/alpine-XrayR/main/init.d/XrayR -s
         rc-update add XrayR
         rc-service XrayR start
         if [ "$?" -ne '0' ]; then
             echo 'error: Failed to start service file download! Please check your network or try again.'
             exit 1
         fi
-        install -m 755 "${TMP_DIRECTORY}init.d/XrayR" /etc/init.d/XrayR
         OPENRC='1'
     fi
 }
