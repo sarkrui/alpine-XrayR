@@ -99,6 +99,7 @@ install_xrayr() {
     mkdir -p /usr/local/XrayR/
     mkdir -p /etc/XrayR/
     install -m 755 "${TMP_DIRECTORY}XrayR" "/usr/local/XrayR/XrayR"
+    install -m 755 "${TMP_DIRECTORY}config.yml" "/etc/XrayR/config.yml"
     install -d /usr/local/XrayR/
     install -m 755 "${TMP_DIRECTORY}geoip.dat" "/etc/XrayR/geoip.dat"
     install -m 755 "${TMP_DIRECTORY}geosite.dat" "/etc/XrayR/geosite.dat"
