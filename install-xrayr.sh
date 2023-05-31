@@ -96,6 +96,7 @@ is_it_running() {
 }
 
 install_xrayr() {
+    mkdir -p /usr/local/XrayR/
     install -m 755 "${TMP_DIRECTORY}XrayR" "/usr/local/XrayR/XrayR"
     install -d /usr/local/XrayR/
     install -m 755 "${TMP_DIRECTORY}geoip.dat" "/etc/XrayR/geoip.dat"
